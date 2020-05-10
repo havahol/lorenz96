@@ -136,3 +136,12 @@ class Lorenz96:
 
         return new_X, new_Y, new_Z
         
+    def getActualState(self):
+        return self.X[self.it, :]
+    
+    def getActualTimeseries(self):
+        return self.X
+
+    def setCurrentState(self, X, is_normalized=True):
+        self.X[self.it, :] = X
+        
