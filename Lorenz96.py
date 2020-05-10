@@ -34,16 +34,16 @@ class Lorenz96:
         
         # Initialzation:
         if init_X is not None:
-            self.X[0,:] = init_X
+            self.X[0,:] = init_X.copy()
         else:
             self.X[0,:] = np.random.normal(loc=0, scale=1, size=self.nx)
         
         if init_Y is not None:
-            self.Y = init_Y
+            self.Y = init_Y.copy()
         else:
             self.Y = np.random.normal(loc=0, scale=1, size=(self.nx, self.ny))
         if init_Z is not None:
-            self.Z = init_Z
+            self.Z = init_Z.copy()
         else:
             self.Z = np.random.normal(loc=0, scale=0.05, size=(self.nx,self.ny,self.nz))
         
